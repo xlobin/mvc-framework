@@ -12,7 +12,6 @@
  */
 class TestController extends CKontrol {
     public function actionTest(){
-        new Testing();
         $this->render(array('test'));
     }
 }

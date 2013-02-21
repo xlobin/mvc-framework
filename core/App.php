@@ -22,21 +22,32 @@ class App {
     private static $_coreClass = array(
         'CWeb'=>'core/web/CWeb.php',
         'CKontrol'=>'core/web/CKontrol.php',
+        'CException'=>'core/helper/CException.php',
         'CAplikasi'=>'core/app/CAplikasi.php',
         'IKontrol'=>'core/web/IKontrol.php',
+        'CModel'=>'core/db/CModel.php',
+        'CDBConnection'=>'core/db/CDBConnection.php',
     );
     
+    /**
+     * run factory
+     * @param array $config
+     * @return CWeb
+     */
     public static function createWeb($config){
         return new CWeb($config);
     }
     
     /**
-     * 
-     * @param type $class
+     * loader untuk memanggil core class
+     * @param Object $class
      */
     public static function loader($class){
-        if (!is_null($class)){
-            include self::getPathClasses($class);
+        if (!empty($class)){
+            if (isset(self::$_coreClass[$class])){
+                include self::getPathClasses($class);
+            }
+
         }
     }
     
@@ -54,8 +65,6 @@ class App {
         else if (is_array(self::$_coreClass)){
             if (array_key_exists($class, $core)){
                 return $core[$class];
-            }else{
-                throw 'Kelas tidak terdaftar di core class';
             }
         }
     }
