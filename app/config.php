@@ -5,10 +5,8 @@ return array(
      * koneksi database
      */
     'db'=>array(
-        'databaseVendor'=>'mysql',
-        'databaseHost'=>'localhost',
-        'databaseName'=>'test',
-        'databaseUser'=>'',
-        'databasePassword'=>'',
+        'databaseConnection'=>'mysql:host=localhost;dbname=test',
+        'databaseUser'=>'root',
+        'databasePassword'=>'root',
     ),
 );

@@ -10,14 +10,15 @@
  *
  * @author home
  */
-class Data extends CModel {
+class User extends CModel {
     public static function getTable() {
-        return 'test';
+        return 'user';
     }
     
     public static function model($class = __CLASS__) {
         return parent::model($class);
     }
+    
 }
 
 ?>

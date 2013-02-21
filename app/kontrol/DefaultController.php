@@ -12,7 +12,9 @@
  */
 class DefaultController extends CKontrol {
     public function actionIndex(){
-        Data::model()->findAll();
+        $data = User::model()->fetchAll($criteria);
+        echo '<pre>';
+        print_r($data);
     }
 }
 
