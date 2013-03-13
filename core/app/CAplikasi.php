@@ -36,6 +36,7 @@ class CAplikasi {
     
     /**
      * method untuk menset request route
+     * @assert (0, 0) == 1
      */
     public function setRequestRoute(){
         if (isset($_GET['r'])){

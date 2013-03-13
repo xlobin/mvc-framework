@@ -27,6 +27,10 @@ class App {
         'IKontrol'=>'core/web/IKontrol.php',
         'CModel'=>'core/db/CModel.php',
         'CDBConnection'=>'core/db/CDBConnection.php',
+        'CDBCriteria'=>'core/db/CDBCriteria.php',
+        'CSession'=>'core/web/CSession.php',
+        'CInstance'=>'core/web/CInstance.php',
+        'CHtml'=>'core/helper/CHtml.php',
     );
     
     /**
@@ -78,6 +82,10 @@ class App {
         if (!is_null(trim($class))){
             self::$_coreClass[$class] = $path;
         }
+    }
+    
+    public static function instance($class){
+        return new $class;
     }
 }
 
