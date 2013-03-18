@@ -18,9 +18,7 @@ class CSession {
      * constuctor and start the session
      */
     function __construct() {
-        if ($this->getStatus() != 2){
-             session_start();
-        }
+        session_start();
     }
     
     /**
@@ -73,6 +71,10 @@ class CSession {
         }
     }
     
+    /**
+     * method to unset session
+     * @param string $name index name of session
+     */
     public function unsetSession($name=null){
         if (isset($name)){
             unset($_SESSION[$name]);

@@ -31,6 +31,10 @@ class App {
         'CSession'=>'core/web/CSession.php',
         'CInstance'=>'core/web/CInstance.php',
         'CHtml'=>'core/helper/CHtml.php',
+        'CUrl'=>'core/helper/CUrl.php',
+        'CHttpRequest'=>'core/helper/CHttpRequest.php',
+        'CKomponen'=>'core/base/CKomponen.php',
+        'CFile'=>'core/helper/CFile.php',
     );
     
     /**
